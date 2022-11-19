@@ -4,8 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Crypto Dashboard</title>
     <link rel="stylesheet" href="./style/dashboard.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@600&family=Jost&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <main>
@@ -322,14 +328,241 @@
                 <div class="dashboard-quickview__visuals-title">
                   <h3>Market Overview</h3>
                   <div class="dashboard-quickview__visuals-more-options">
-                    <div class="dashboard-quickview__visuals-more-options-icon"></div>
-                    <div class="dashboard-quickview__visuals-more-options-icon"></div>
-                    <div class="dashboard-quickview__visuals-more-options-icon"></div>
+                    <div
+                      class="dashboard-quickview__visuals-more-options-icon"
+                    ></div>
+                    <div
+                      class="dashboard-quickview__visuals-more-options-icon"
+                    ></div>
+                    <div
+                      class="dashboard-quickview__visuals-more-options-icon"
+                    ></div>
                   </div>
                 </div>
+
+                <div class="dashboard-quickview__visuals-sort">
+                  <form>
+                    <label for="sortOptions">Sort by:</label>
+                    <select class="dashboard-quickview__visuals-sort-select">
+                      <option value="monthly">Monthly</option>
+                    </select>
+                  </form>
+
+                  <form class="checkbox-container">
+                    <input
+                      type="checkbox"
+                      value="BTS"
+                      checked="checked"
+                      class="checkbox-container__checkbox"
+                    />
+                    <label for="BTS"> BTS</label>
+                    <input
+                      type="checkbox"
+                      value="XRP"
+                      checked="checked"
+                      class="checkbox-container__checkbox"
+                    />
+                    <label for="XRP"> XRP</label>
+                    <input
+                      type="checkbox"
+                      value="ETH"
+                      class="checkbox-container__checkbox"
+                    />
+                    <label for="ETH"> ETH</label>
+                    <input
+                      type="checkbox"
+                      class="checkbox-container__checkbox"
+                      value="ZEC"
+                    />
+                    <label for="ZEC"> ZEC</label>
+                  </form>
+
+                  <div class="toggle-theme">
+                    <span>Dark</span>
+                    <label class="switch">
+                      <input type="checkbox" checked />
+                      <span class="slider round"></span>
+                    </label>
+                  </div>
+                </div>
+
+                <ul class="dashboard-quickview__visuals-graph-list">
+                  <li>
+                    <span class="dashboard-quickview__visuals-graph-list-y"
+                      >25k</span
+                    >
+                  </li>
+                  <li>
+                    <span class="dashboard-quickview__visuals-graph-list-y"
+                      >20k</span
+                    >
+                  </li>
+                  <li>
+                    <span class="dashboard-quickview__visuals-graph-list-y"
+                      >15k</span
+                    >
+                  </li>
+                  <li>
+                    <span class="dashboard-quickview__visuals-graph-list-y"
+                      >5k</span
+                    >
+                  </li>
+                  <li>
+                    <span class="dashboard-quickview__visuals-graph-list-y"
+                      >0k</span
+                    >
+                  </li>
+                </ul>
+                <sapn class="dashboard-quickview__visuals-graph-line">
+                  <svg
+                    width="1124"
+                    height="160"
+                    viewBox="0 0 1124 160"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M2 106.76L6.66937 104.374C16.6939 99.6387 45.8667 90.976 68.2667 98.3907C89.7333 105.805 112.133 142.879 133.6 154.001C156 165.123 177.467 150.293 199.867 142.879C221.333 135.464 243.733 135.464 265.2 116.927C287.6 98.3907 309.067 61.3174 331.467 57.61C352.933 53.9027 375.333 83.5614 397.733 94.6834C419.2 105.805 441.6 98.3907 463.067 90.976C485.467 83.5614 506.933 76.1467 529.333 87.2687C550.8 98.3907 573.2 128.049 594.667 131.757C617.067 135.464 638.533 113.22 660.933 90.976C682.4 68.732 704.8 46.488 726.267 35.366C748.667 24.244 771.067 24.244 792.533 31.6587C814.933 39.0733 836.4 53.9027 858.8 79.854C880.267 105.805 902.667 63.3306 924.133 85.5746C946.533 107.819 968 115.233 990.4 85.5746C1011.87 55.9159 1034.27 68.732 1055.73 35.366C1078.13 2 1099.6 2 1110.8 2H1122"
+                      stroke="#3B82F6"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M1122 72.7502C1122 72.7502 1045 107.052 975.347 110.993C907.504 114.831 863.163 104 804.558 87.5C789.118 83.1529 767.116 77.5 747.581 78C720.52 78.6927 693.272 87.7134 675.954 94C658.047 100.5 647.267 106.065 632 114C610.837 125 601.355 139.553 555.488 147.5C523.936 152.967 498.417 120.415 462.698 118.487C388.584 114.488 391.07 153.595 283.478 157.83C252.163 159.063 231.568 153.483 212.517 144.51C205.448 141.18 206.88 137.889 198.325 135.056C188.496 131.802 178.442 132.803 166.393 130.759C134.753 125.391 129.757 113.323 95.4318 110.993C57.3787 108.41 2.00004 123.025 2.00004 123.025"
+                      stroke="#22C55E"
+                      stroke-width="3"
+                    />
+                  </svg>
+
+                  <ul class="dashboard-quickview__visuals-graph-list-bottom">
+                    <li>
+                      <span class="dashboard-quickview__visuals-graph-list-x"
+                        >00:00</span
+                      >
+                    </li>
+                    <li>
+                      <span class="dashboard-quickview__visuals-graph-list-x"
+                        >03:00</span
+                      >
+                    </li>
+                    <li>
+                      <span class="dashboard-quickview__visuals-graph-list-x"
+                        >06:00</span
+                      >
+                    </li>
+                    <li>
+                      <span class="dashboard-quickview__visuals-graph-list-x"
+                        >09:00</span
+                      >
+                    </li>
+                    <li>
+                      <span class="dashboard-quickview__visuals-graph-list-x"
+                        >12:00</span
+                      >
+                    </li>
+                    <li>
+                      <span class="dashboard-quickview__visuals-graph-list-x"
+                        >00:00</span
+                      >
+                    </li>
+                    <li>
+                      <span class="dashboard-quickview__visuals-graph-list-x"
+                        >03:00</span
+                      >
+                    </li>
+                    <li>
+                      <span class="dashboard-quickview__visuals-graph-list-x"
+                        >06:00</span
+                      >
+                    </li>
+                    <li>
+                      <span class="dashboard-quickview__visuals-graph-list-x"
+                        >09:00</span
+                      >
+                    </li>
+                    <li>
+                      <span class="dashboard-quickview__visuals-graph-list-x"
+                        >12:00</span
+                      >
+                    </li>
+                  </ul>
+                </sapn>
               </div>
               <div class="dashboard-quickview__visuals-progress"></div>
             </div>
+          </section>
+
+          <section class="tabular-view">
+            <div class="tabular-view__best-seller">
+              <div class="tabular-view__title">
+                <h3 class="tabular-view__title-heading">
+                  Best Selling Products
+                </h3>
+                <div class="tabular-view__more-options">
+                  <form>
+                    <label for="sortOptions">Sort by:</label>
+                    <select class="dashboard-quickview__visuals-sort-select">
+                      <option value="monthly">Monthly</option>
+                    </select>
+                  </form>
+                  <div class="dashboard-quickview__visuals-more-options">
+                    <div
+                      class="dashboard-quickview__visuals-more-options-icon"
+                    ></div>
+                    <div
+                      class="dashboard-quickview__visuals-more-options-icon"
+                    ></div>
+                    <div
+                      class="dashboard-quickview__visuals-more-options-icon"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+
+              <div>
+                <table class="tabular-view__table-best-seller">
+                  <tbody>
+                    <tr>
+                      <td><img src="./style/assets/best-seller-1.png" alt="best-seller-1" class="tabular-view__table-image"/></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><img src="./style/assets/best-seller-2.png" alt="best-seller-2" class="tabular-view__table-image"/></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><img src="./style/assets/best-seller-3.png" alt="best-seller-3" class="tabular-view__table-image"/></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><img src="./style/assets/best-seller-4.png" alt="best-seller-4" class="tabular-view__table-image"/></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td><img src="./style/assets/best-seller-5.png" alt="best-seller-5" class="tabular-view__table-image"/></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="tabular-view__best-seller"></div>
           </section>
         </section>
       </section>
